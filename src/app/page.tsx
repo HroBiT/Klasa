@@ -56,7 +56,7 @@ export default function Home() {
             </SelectGroup>
           </SelectContent>
         </Select>
-        <Button type="submit" className="w-full max-w-[300px]">
+        <Button type="submit" className="w-full max-w-[300px] " variant={"ghost"}>
           Dalej
         </Button>
       </form>

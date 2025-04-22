@@ -12,6 +12,8 @@ import {
   } from "@/components/ui/table"
 import React, { useEffect, useState } from "react";
 import initialData from "@/lib/initialData"; 
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 interface Student {
   lp: number;
@@ -21,9 +23,10 @@ interface Student {
 }
 
 export default function KlasaPage({ params }: { params: Promise<{ id: string }> }) {
-  const [students, setStudents] = useState<Student[]>([]);
-  const [teacher, setTeacher] = useState<string | null>(null);
-  const [classId, setClassId] = useState<string | null>(null);
+    const rout = useRouter();
+    const [students, setStudents] = useState<Student[]>([]);
+    const [teacher, setTeacher] = useState<string | null>(null);
+    const [classId, setClassId] = useState<string | null>(null);
 
   useEffect(() => {
     if (!localStorage.getItem("Klasy")) {
@@ -49,6 +52,10 @@ export default function KlasaPage({ params }: { params: Promise<{ id: string }> 
     });
     
   }, []);
+
+  const handleButton = () => {
+    rout.push("/");
+  }
 
   return (
     <div className="flex flex-col justify-center items-center gap-5">
@@ -80,6 +87,7 @@ export default function KlasaPage({ params }: { params: Promise<{ id: string }> 
             </TableRow>
           </TableFooter>
         </Table>
+        <Button onClick={handleButton} variant={"ghost"}>Powrot</Button>
     </div>
   );
 }
