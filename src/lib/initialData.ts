@@ -1,6 +1,6 @@
 const initialData = {
     classes: {
-      "1A": {
+      "4P": {
         teacher: "Jan Kowalski",
         students: [
           { lp: 1, imie: "Anna", nazwisko: "Nowak", srednia: 4.5 },
@@ -10,7 +10,7 @@ const initialData = {
           { lp: 5, imie: "Ewa", nazwisko: "Wiśniewska", srednia: 4.1 },
         ],
       },
-      "2B": {
+      "3G": {
         teacher: "Anna Wiśniewska",
         students: [
           { lp: 1, imie: "Krzysztof", nazwisko: "Kowalczyk", srednia: 4.0 },
@@ -20,7 +20,7 @@ const initialData = {
           { lp: 5, imie: "Paweł", nazwisko: "Zieliński", srednia: 3.9 },
         ],
       },
-      "3C": {
+      "5A": {
         teacher: "Michał Zieliński",
         students: [
           { lp: 1, imie: "Karolina", nazwisko: "Wiśniewska", srednia: 4.8 },
