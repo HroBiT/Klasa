@@ -12,8 +12,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+
 import { Button } from "@/components/ui/button";
 import initialData from "@/lib/initialData";
+
 
 export default function Home() {
   const [currentSelect, setCurrentSelect] = React.useState("");
@@ -36,6 +38,10 @@ export default function Home() {
     }
   };
 
+  const handleSwitch = () => {
+    router.push("/Dodawanie");
+  }
+
   return (
     <div className="flex flex-col justify-center items-center gap-5 min-h-screen">
       
@@ -56,10 +62,17 @@ export default function Home() {
             </SelectGroup>
           </SelectContent>
         </Select>
-        <Button type="submit" className="w-full max-w-[300px] " variant={"ghost"}>
+        <Button type="submit" className="w-full max-w-[300px] border-2 border-white  " variant={"ghost"}>
           Dalej
         </Button>
       </form>
+      <Button
+      onClick={handleSwitch}
+      className="w-full max-w-[300px] border-2 border-white "
+      variant={"ghost"}
+    >
+      Dodaj Nowego ucznia
+    </Button>
     </div>
   );
 }

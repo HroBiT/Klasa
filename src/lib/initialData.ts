@@ -1,5 +1,4 @@
 const initialData = {
-    classes: {
       "4P": {
         teacher: "Jan Kowalski",
         students: [
@@ -29,7 +28,6 @@ const initialData = {
           { lp: 4, imie: "Łukasz", nazwisko: "Kaczmarek", srednia: 3.5 },
           { lp: 5, imie: "Zofia", nazwisko: "Wiśniewska", srednia: 4.7 },
         ],
-      },
     },
   };
   
